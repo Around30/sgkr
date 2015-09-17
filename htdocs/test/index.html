@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <title>テスト</title>
 
 <body>
   <header>
-    <h1>すぐくる</h1>
-    <form action="">
-      <input type="text" name="email">
-      <button type="submit">検索</button>
-    </form>
+    <div class="header_titleLogo">
+      <h1>すぐくる</h1> 
+    </div>
+    <div class="header_form">
+      <form action="">
+        <input type="text" name="email">
+        <button type="submit">検索</button>
+      </form>
+    </div>
+    <div class="header_login"> <span class="header_login_icon">
+    <i class="fa fa-user"></i>
+    </span>  <span class="header_login_text">ログイン</span> 
+    </div>
+    <div class="header_cart"> <span class="header_cart_icon">
+    <i class="fa fa-cart-plus"></i>
+      </span> 
+    </div>
   </header>
   <nav>
     <ul>
@@ -37,7 +50,16 @@
   </main>
   <footer></footer>
 </body>
-<script>
-</script>
+<script src="/bower_components/bootstrap/affix.js"></script>
+<script src="/bower_components/bootstrap/alert.js"></script>
+<script src="/bower_components/bootstrap/button.js"></script>
+<script src="/bower_components/bootstrap/collapse.js"></script>
+<script src="/bower_components/bootstrap/dropdown.js"></script>
+<script src="/bower_components/bootstrap/modal.js"></script>
+<script src="/bower_components/bootstrap/popover.js"></script>
+<script src="/bower_components/bootstrap/scrollspy.js"></script>
+<script src="/bower_components/bootstrap/tab.js"></script>
+<script src="/bower_components/bootstrap/tooltip.js"></script>
+<script src="/bower_components/bootstrap/transition.js"></script>
 
 </html>
