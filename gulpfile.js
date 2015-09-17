@@ -5,6 +5,7 @@ var htmlPrettify = require('gulp-html-prettify');
 var htmlhint = require('gulp-htmlhint');
 var sass = require('gulp-sass');
 var runSequence = require('run-sequence');
+var browserSync = require('browser-sync');
 
 gulp.task('ejs', function() {
   gulp.src(['app/src/modules/**/*.ejs', '!app/src/common/_*.ejs'])
@@ -38,6 +39,19 @@ gulp.task('wiredep', function () {
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app/src'));
+});
+
+gulp.task('serve', ['sass'], function () {
+  browserSync({
+    notify: false,
+    port: 9000,
+    server: {
+      baseDir: ['dist'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    }
+  })
 });
 
 gulp.task('build', function() {

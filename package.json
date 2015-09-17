@@ -28,6 +28,7 @@
     "gulp-indent": "^1.0.1",
     "gulp-prettify": "^0.3.0",
     "gulp-sass": "^2.0.4",
+    "gulp-serve": "^1.2.0",
     "gulp-stylus": "^2.0.6",
     "run-sequence": "^1.1.3"
   },
