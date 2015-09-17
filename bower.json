@@ -1,7 +1,7 @@
 {
-  "name": "jinzo-midoribito",
+  "name": "sgkr",
   "version": "0.0.0",
-  "homepage": "https://github.com/midoribito/jinzo-midoribito",
+  "homepage": "https://github.com/Around30/sgkr",
   "authors": [
     "midoribito <jingaimidoribito@gmail.com>"
   ],
@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.5",
-    "bootstrap": "~3.3.5",
-    "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "bootstrap": "~3.3.5"
   }
 }

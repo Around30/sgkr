@@ -4,8 +4,11 @@ var prettify = require('gulp-prettify');
 var htmlPrettify = require('gulp-html-prettify');
 var htmlhint = require('gulp-htmlhint');
 var sass = require('gulp-sass');
+var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+var watch = require('gulp-watch');
 
 gulp.task('ejs', function() {
   gulp.src(['app/src/modules/**/*.ejs', '!app/src/common/_*.ejs'])
@@ -25,20 +28,18 @@ gulp.task('sass', function() {
 })
 
 gulp.task('wiredep', function () {
-  var wiredep = require('wiredep').stream;
-
   gulp.src('app/src/styles/*.scss')
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)+/
     }))
     .pipe(gulp.dest('app/src/styles'));
 
-  gulp.src('app/src/modules/**/*.ejs')
+  gulp.src('dist/**/*.html')
     .pipe(wiredep({
-      exclude: ['bootstrap-sass-official'],
+      exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
-    .pipe(gulp.dest('app/src'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('serve', ['ejs', 'sass'], function () {
@@ -51,9 +52,21 @@ gulp.task('serve', ['ejs', 'sass'], function () {
         '/bower_components': 'bower_components'
       }
     }
-  })
+  });
+
+  gulp.watch([
+    'app/**/*.ejs',
+  ]).on('change', reload);
+
+  gulp.watch('app/styles/**/*.ejs', ['ejs']);
+  gulp.watch('app/styles/**/*.scss', ['sass']);
+  gulp.watch('bower.json', ['wiredep']);
 });
 
 gulp.task('build', function() {
   runSequence('ejs', 'sass');
+});
+
+gulp.task('default', function() {
+
 });
