@@ -1,28 +1,45 @@
 var gulp = require('gulp');
 var ejs = require('gulp-ejs');
-var stylus = require('gulp-stylus');
 var prettify = require('gulp-prettify');
 var htmlPrettify = require('gulp-html-prettify');
 var htmlhint = require('gulp-htmlhint');
+var sass = require('gulp-sass');
 var runSequence = require('run-sequence');
 
-gulp.task('ejs', function () {
-    gulp.src(['app/src/modules/**/*.ejs', '!app/src/common/_*.ejs'])
-        .pipe(ejs())
-        .pipe(prettify())
-        .pipe(htmlPrettify({
-            indent_size: 2
-        }))
-        .pipe(htmlhint())
-        .pipe(gulp.dest('htdocs'))
+gulp.task('ejs', function() {
+  gulp.src(['app/src/modules/**/*.ejs', '!app/src/common/_*.ejs'])
+  .pipe(ejs())
+  .pipe(prettify())
+  .pipe(htmlPrettify({
+    indent_size: 2
+  }))
+  .pipe(htmlhint())
+  .pipe(gulp.dest('dist'))
 });
 
-gulp.task('stylus', function () {
-    gulp.src(['app/styl/**/*.styl'])
-        .pipe(stylus())
-        .pipe(gulp.dest('htdocs/css'))
+gulp.task('sass', function() {
+  gulp.src(['app/src/styles/main.scss'])
+  .pipe(sass())
+  .pipe(gulp.dest('dist/css'))
+})
+
+gulp.task('wiredep', function () {
+  var wiredep = require('wiredep').stream;
+
+  gulp.src('app/src/styles/*.scss')
+    .pipe(wiredep({
+      ignorePath: /^(\.\.\/)+/
+    }))
+    .pipe(gulp.dest('app/src/styles'));
+
+  gulp.src('app/src/modules/**/*.ejs')
+    .pipe(wiredep({
+      exclude: ['bootstrap-sass-official'],
+      ignorePath: /^(\.\.\/)*\.\./
+    }))
+    .pipe(gulp.dest('app/src'));
 });
 
-gulp.task('build', function () {
-    runSequence('ejs', 'stylus');
+gulp.task('build', function() {
+  runSequence('ejs', 'sass');
 });

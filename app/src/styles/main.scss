@@ -1,0 +1,47 @@
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header {
+  padding-bottom: 20px;
+}
+
+.footer {
+  padding-top: 19px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.figure {
+  padding-left: 20px;
+
+  figcaption {
+    margin-top: 15px;
+  }
+}
+
+.jumbotron {
+  text-align: center;
+  background: url(./../images/jumbotron.jpg);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 980px;
+  }
+}
