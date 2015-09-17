@@ -6,32 +6,45 @@
 
 <body>
   <header>
-    <div class="header_titleLogo">
-      <h1>テストサイト</h1> 
-    </div>
-    <div class="header_form">
-      <form action="">
-        <input type="text" name="email">
-        <button type="submit">検索</button>
-      </form>
-    </div>
-    <div class="header_login"> <span class="header_login_icon">
+    <div class="container">
+      <div class="row">
+        <div class="header_titleLogo col-md-3">
+          <h1>テストサイト</h1> 
+        </div>
+        <div class="header_form col-md-3">
+          <form action="">
+            <input type="text" name="email">
+            <button type="submit">検索</button>
+          </form>
+        </div>
+        <div class="header_login col-md-4"> <span class="header_login_icon">
     <i class="fa fa-user"></i>
     </span>  <span class="header_login_text">ログイン</span> 
-    </div>
-    <div class="header_cart"> <span class="header_cart_icon">
+        </div>
+        <div class="header_cart col-md-2"> <span class="header_cart_icon">
     <i class="fa fa-cart-plus"></i>
       </span> 
+        </div>
+      </div>
     </div>
   </header>
-  <nav>
-    <ul>
-      <li>新着</li>
-      <li>人気</li>
-      <li>おすすめ</li>
-      <li>カテゴリ別</li>
-      <li>メーカー別</li>
-    </ul>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span> 
+        </button> <a class="navbar-brand" href="#">Brand</a> 
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>新着</li>
+          <li>人気</li>
+          <li>おすすめ</li>
+          <li>カテゴリ別</li>
+          <li>メーカー別</li>
+        </ul>
+      </div>
+    </div>
   </nav>
   <main>
     <article>
