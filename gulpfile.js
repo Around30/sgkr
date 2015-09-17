@@ -55,12 +55,11 @@ gulp.task('serve', ['ejs', 'sass'], function () {
   });
 
   gulp.watch([
-    'app/**/*.ejs',
+    'dist/**/*.html'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.ejs', ['ejs']);
-  gulp.watch('app/styles/**/*.scss', ['sass']);
-  gulp.watch('bower.json', ['wiredep']);
+  gulp.watch(['app/src/common/_*.ejs'], ['ejs']);
+  gulp.watch(['app/src/modules/**/*.ejs'], ['ejs']);
 });
 
 gulp.task('build', function() {
