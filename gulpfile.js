@@ -41,7 +41,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app/src'));
 });
 
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', ['ejs', 'sass'], function () {
   browserSync({
     notify: false,
     port: 9000,
