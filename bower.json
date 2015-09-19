@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "angular": "~1.4.5",
-    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
-    "bootstrap": "~3.3.5"
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
   }
 }

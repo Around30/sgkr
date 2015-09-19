@@ -28,18 +28,12 @@ gulp.task('sass', function() {
 })
 
 gulp.task('wiredep', function () {
-  gulp.src('app/src/styles/*.scss')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('app/src/styles'));
-
-  gulp.src('dist/**/*.html')
+  gulp.src('app/src/common/_*.ejs')
     .pipe(wiredep({
       exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('app/src/common'));
 });
 
 gulp.task('serve', ['ejs', 'sass'], function () {
