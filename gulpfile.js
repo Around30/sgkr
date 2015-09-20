@@ -18,16 +18,14 @@ var eventStream = require('event-stream').merge;
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
-// var browserify = require('browserify');
-// var vinylSourceStream = require('vinyl-source-stream');
 var wiredep = require('wiredep').stream;
-var useref = require('gulp-useref'), assets = useref.assets({searchPath: 'dist'});
+var useref = require('gulp-useref'),
+    assets = useref.assets({searchPath: 'dist'});
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
-var browserSync = require('browser-sync'), reload = browserSync.reload;
+var browserSync = require('browser-sync'),
+    reload = browserSync.reload;
 var watch = require('gulp-watch');
-// var ifGulp = require('gulp-if');
-// var csso = require('gulp-csso');
 
 /*
 　■■■＼　　　■■＼　　■■■＼　■＼　■＼
