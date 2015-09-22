@@ -40,6 +40,20 @@ body {
   color: #fff;
 }
 
+.header {
+  &_titleLogo {
+
+    h1 {
+      margin: 0;
+    }
+
+    img {
+      width:200px;
+      height:auto;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 980px;
