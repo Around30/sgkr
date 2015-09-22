@@ -64,7 +64,7 @@ gulp.task('html', function() {
   .pipe(gulp.dest(distVeiwPath))
 });
 
-gulp.task('css', function(done) {
+gulp.task('css', function() {
   gulp.src([sassPath + '*.scss'])
   .pipe(plumber())
   .pipe(concat('main.scss'))
