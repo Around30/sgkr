@@ -41,6 +41,9 @@ var distVeiwPath = 'dist/view';
 var distCssPath = 'dist/css';
 var distJsPath = 'dist/js';
 var distImgPath = 'dist/img';
+var jqueryPath = 'jquery/dist/jquery.js';
+var angularPath = 'angular/angular.js';
+var bootstrapPath = 'bootstrap-sass/assets/javascripts/bootstrap/*.js';
 
 /*
 　■■■＼　　■■＼　　　■■■＼　■＼　■＼
@@ -67,24 +70,18 @@ gulp.task('css', function(done) {
   .pipe(concat('main.scss'))
   .pipe(sass())
   .pipe(gulp.dest(distCssPath))
-  .on('end', function() {
-    gulp.src([componentsPath + 'normalize-css/normalize.css', 'dist/css/*.css'])
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest(distCssPath))
-    .on('end', done);
-  });
 });
 
 gulp.task('js', function() {
   return eventStream(
-    gulp.src([componentsPath + 'angular/angular.js', componentsPath + 'jquery/dist/jquery.js'])
+    gulp.src([componentsPath + jqueryPath, componentsPath + angularPath])
     .pipe(concat('vendor.js'))
     .pipe(uglify({
       preserveComments: 'some'
     }))
     .pipe(gulp.dest(distJsPath)),
 
-    gulp.src([componentsPath + 'bootstrap-sass/assets/javascripts/bootstrap/*.js'])
+    gulp.src([componentsPath + bootstrapPath])
     .pipe(concat('plugins.js'))
     .pipe(uglify({
       preserveComments: 'some'
