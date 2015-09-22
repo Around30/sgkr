@@ -53,10 +53,11 @@ gulp.task('ejs', function() {
 gulp.task('sass', function(done) {
   gulp.src(['app/src/sass/*.scss'])
   .pipe(plumber())
+  .pipe(concat('main.scss'))
   .pipe(sass())
-  .pipe(gulp.dest('app/src/css'))
+  .pipe(gulp.dest('dist/css'))
   .on('end', function() {
-    gulp.src(['bower_components/normalize-css/normalize.css', 'app/src/css/*.css'])
+    gulp.src(['bower_components/normalize-css/normalize.css', 'dist/css/*.css'])
     .pipe(concat('main.css'))
     .pipe(gulp.dest('dist/css'))
     .on('end', done);
