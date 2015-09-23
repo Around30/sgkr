@@ -42,7 +42,6 @@ body {
 
 .header {
   &_titleLogo {
-
     h1 {
       margin: 0;
     }
@@ -50,6 +49,9 @@ body {
     img {
       width:200px;
       height:auto;
+    }
+    &.navbar-brand {
+      padding: 0;
     }
   }
 }
