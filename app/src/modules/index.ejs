@@ -2,8 +2,8 @@
 var site_name = "すぐくる";
 var css_main = "./../css/main.css";
 var js_main = "./../js/main.js";
-var js_plugins= "./../js/main.plugins.js";
-var js_vendor= "./../js/main.vendor.js";
+var js_plugins = "./../js/main.plugins.js";
+var js_vendor = "./../js/main.vendor.js";
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -11,21 +11,47 @@ var js_vendor= "./../js/main.vendor.js";
   <% include ./../common/head %>
 </head>
 <body>
-  <% include ./../common/header %>
-  <% //include ./../common/nav %>
-  <main>
-    <article>
-
+<% include ./../common/header %>
+<% //include ./../common/nav    %>
+<main>
+  <article>
+    <div class="itemLists container">
       <h2>NEW ITEMS</h2>
-      <ul class="itemList">
-        <li class="itemList_item">
 
-        </li>
-      </ul>
-    </article>
-    <% include ./../common/aside %>
-  </main>
-  <% include ./../common/footer %>
-  <% include ./../common/script %>
+      <div class="itemList row">
+        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+          <img src="./../img/stationery/_01.jpg" alt="">
+          <div class="itemList_item_detail">
+            <h3 class="itemList_item_name">文房具1</h3>
+            <div class="itemList_item_price">Price：100円</div>
+            <div class="itemList_item_category">書道用品</div>
+          </div>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+          <img src="./../img/stationery/_02.gif" alt="">
+          <h3 class="itemList_item_name">文房具2</h3>
+          <div class="itemList_item_price">Price：100円</div>
+          <div class="itemList_item_category">書道用品</div>
+        </div>
+
+        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+          <img src="./../img/stationery/_03.jpg" alt="">
+          <h3 class="itemList_item_name">文房具3</h3>
+          <div class="itemList_item_price">Price：100円</div>
+          <div class="itemList_item_category">書道用品</div>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+          <img src="./../img/stationery/_04.jpg" alt="">
+          <h3 class="itemList_item_name">文房具4</h3>
+          <div class="itemList_item_price">Price：100円</div>
+          <div class="itemList_item_category">書道用品</div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <% include ./../common/aside %>
+</main>
+<% include ./../common/footer %>
+<% include ./../common/script %>
 </body>
 </html>
