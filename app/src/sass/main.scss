@@ -56,6 +56,16 @@ body {
   }
 }
 
+.nav {
+
+  &_item {
+    text-align: center;
+  }
+  &_icon {
+    font-size: 22px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 980px;
