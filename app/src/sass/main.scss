@@ -41,17 +41,21 @@ body {
 }
 
 .header {
+  &_bg {
+    background-color: #2C2C2C;
+  }
   &_titleLogo {
     h1 {
       margin: 0;
     }
 
     img {
-      width:200px;
-      height:auto;
+      width:auto;
+      height:74px;
     }
     &.navbar-brand {
-      padding: 10px;
+      padding: 0;
+      height: 74px;
     }
   }
 
@@ -62,9 +66,16 @@ body {
   &_nav {
     &_item {
       text-align: center;
+
+      & > a {
+        color: #fff !important;
+      }
     }
     &_icon {
-      font-size: 22px;
+      i {
+        padding-bottom: 4px;
+        font-size: 18px;
+      }
     }
   }
 }
