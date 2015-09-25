@@ -74,7 +74,7 @@ gulp.task('css', function(done) {
   .pipe(sass())
   .pipe(gulp.dest(distCssPath))
   .on('end', function() {
-    gulp.src([distCssPath, componentsPath + bxSliderCssPath])
+    gulp.src([distCssPath + 'main.css', componentsPath + bxSliderCssPath])
     .pipe(concat('main.css'))
     .pipe(gulp.dest(distCssPath))
     .on('end', done);
