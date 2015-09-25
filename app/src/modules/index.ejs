@@ -12,37 +12,70 @@ var js_vendor = "./../js/main.vendor.js";
 </head>
 <body>
 <% include ./../common/header %>
-<% //include ./../common/nav    %>
+<% //include ./../common/nav     %>
+
+<ul class="bxslider">
+  <li><img src="./../img/slideImg/slide01.jpg" alt=""></li>
+  <li><img src="./../img/slideImg/slide02.jpg" alt=""></li>
+  <li><img src="./../img/slideImg/slide03.jpg" alt=""></li>
+</ul>
+
 <main>
   <article>
-    <div class="itemLists container">
-      <h2>NEW ITEMS</h2>
-
+    <div class="itemLists container-fluid">
       <div class="itemList row">
-        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
+          <section class="movie over">
+            <iframe width="100%" height="100%"
+                    src="https://www.youtube.com/embed/jbDqJ-Evb9U?rel=0&amp;controls=0&amp;showinfo=0&fs=0&controls=0&autohide=2&vq=hd1080"
+                    frameborder="0" allowfullscreen></iframe>
+          </section>
+        </div>
+        <!-- movie -->
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
+          <h2>NEWS</h2>
+          <dl>
+            <dt>2015.08.07</dt>
+            <dd><a href="http://www.emme.jp/?p=1364">夏季・休業期間のお知らせ</a></dd>
+            <dt>2015.05.01</dt>
+            <dd><a href="http://www.emme.jp/?p=1351">NEWタンポナートシリーズ一部プライス　変更のお知らせ</a></dd>
+            <dt>2015.04.28</dt>
+            <dd><a href="http://www.emme.jp/?p=1344">GW休業日のお知らせ</a></dd>
+          </dl>
+        </div>
+
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
           <img src="./../img/stationery/_01.jpg" alt="">
+
           <div class="itemList_item_detail">
             <h3 class="itemList_item_name">文房具1</h3>
+
             <div class="itemList_item_price">Price：100円</div>
             <div class="itemList_item_category">書道用品</div>
           </div>
         </div>
-        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
           <img src="./../img/stationery/_02.gif" alt="">
+
           <h3 class="itemList_item_name">文房具2</h3>
+
           <div class="itemList_item_price">Price：100円</div>
           <div class="itemList_item_category">書道用品</div>
         </div>
 
-        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
           <img src="./../img/stationery/_03.jpg" alt="">
+
           <h3 class="itemList_item_name">文房具3</h3>
+
           <div class="itemList_item_price">Price：100円</div>
           <div class="itemList_item_category">書道用品</div>
         </div>
-        <div class="itemList_item col-lg-3 col-md-4 col-sm-4">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
           <img src="./../img/stationery/_04.jpg" alt="">
+
           <h3 class="itemList_item_name">文房具4</h3>
+
           <div class="itemList_item_price">Price：100円</div>
           <div class="itemList_item_category">書道用品</div>
         </div>
@@ -53,5 +86,21 @@ var js_vendor = "./../js/main.vendor.js";
 </main>
 <% include ./../common/footer %>
 <% include ./../common/script %>
+
+<!--何故かjQuery本体読み込むとスライドショー実行出来る-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./../js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="./../css/jquery.bxslider.css" rel="stylesheet"/>
+<script>
+  $(document).ready(function () {
+    $(".bxslider").bxSlider({
+      auto: true,
+      speed: 1000,
+      pause: 3000
+    });
+  });
+</script>
 </body>
 </html>
