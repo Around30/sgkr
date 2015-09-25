@@ -44,6 +44,7 @@ var distImgPath = 'dist/img';
 var jqueryPath = 'jquery/dist/jquery.js';
 var angularPath = 'angular/angular.js';
 var bootstrapPath = 'bootstrap-sass/assets/javascripts/bootstrap/*.js';
+var bxSliderPath = 'bxslider/source/jquery.bxSlider.js';
 
 /*
 　■■■＼　　■■＼　　　■■■＼　■＼　■＼
@@ -74,7 +75,7 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
   return eventStream(
-    gulp.src([componentsPath + jqueryPath, componentsPath + angularPath])
+    gulp.src([componentsPath + jqueryPath, componentsPath + angularPath, componentsPath + bxSliderPath])
     .pipe(concat('vendor.js'))
     .pipe(uglify({
       preserveComments: 'some'
@@ -111,10 +112,11 @@ gulp.task('serve', ['build'], function () {
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['dist'],
-      routes: {
-        '/bower_components': 'bower_components'
-      }
+      baseDir: ['dist']
+      // baseDir: ['dist'],
+      // routes: {
+      //   '/bower_components': 'bower_components'
+      // }
     }
   });
 
