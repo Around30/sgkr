@@ -18,10 +18,11 @@ var eventStream = require('event-stream').merge;
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
-var runSequence = require('run-sequence');
+var clean = require('gulp-clean');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var watch = require('gulp-watch');
+var runSequence = require('run-sequence');
 
 /*
 　■■■＼　　　■■＼　　■■■＼　■＼　■＼
@@ -44,7 +45,8 @@ var distImgPath = 'dist/img';
 var jqueryPath = 'jquery/dist/jquery.js';
 var angularPath = 'angular/angular.js';
 var bootstrapPath = 'bootstrap-sass/assets/javascripts/bootstrap/*.js';
-var bxSliderPath = 'bxslider/source/jquery.bxSlider.js';
+var bxSliderCssPath = 'bxslider/bx_styles/bx_styles.css';
+var bxSliderJsPath = 'bxslider/source/jquery.bxSlider.js';
 
 /*
 　■■■＼　　■■＼　　　■■■＼　■＼　■＼
@@ -65,17 +67,23 @@ gulp.task('html', function() {
   .pipe(gulp.dest(distVeiwPath))
 });
 
-gulp.task('css', function() {
+gulp.task('css', function(done) {
   gulp.src([sassPath + '*.scss'])
   .pipe(plumber())
   .pipe(concat('main.scss'))
   .pipe(sass())
   .pipe(gulp.dest(distCssPath))
+  .on('end', function() {
+    gulp.src([distCssPath, componentsPath + bxSliderCssPath])
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest(distCssPath))
+    .on('end', done);
+  });
 });
 
 gulp.task('js', function() {
   return eventStream(
-    gulp.src([componentsPath + jqueryPath, componentsPath + angularPath, componentsPath + bxSliderPath])
+    gulp.src([componentsPath + jqueryPath, componentsPath + angularPath, componentsPath + bxSliderJsPath])
     .pipe(concat('vendor.js'))
     .pipe(uglify({
       preserveComments: 'some'
@@ -107,16 +115,17 @@ gulp.task('img', function() {
   .pipe(gulp.dest(distImgPath))
 });
 
+gulp.task('clean', function() {
+  return gulp.src(['dist'])
+  .pipe(clean());
+});
+
 gulp.task('serve', ['build'], function () {
   browserSync({
     notify: false,
     port: 9000,
     server: {
       baseDir: ['dist']
-      // baseDir: ['dist'],
-      // routes: {
-      //   '/bower_components': 'bower_components'
-      // }
     }
   });
 
@@ -137,5 +146,5 @@ gulp.task('build', function() {
 });
 
 gulp.task('default', function() {
-
+  runSequence('clean', 'html', 'css', 'js', 'img');
 });
