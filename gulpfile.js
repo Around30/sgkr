@@ -47,6 +47,8 @@ var angularPath = 'angular/angular.js';
 var bootstrapPath = 'bootstrap-sass/assets/javascripts/bootstrap/*.js';
 var bxSliderCssPath = 'bxslider/bx_styles/bx_styles.css';
 var bxSliderJsPath = 'bxslider/source/jquery.bxSlider.js';
+var flexSliderCssPath = 'flexslider/flexslider.css';
+var flexSliderJsPath = 'flexslider/jquery.flexslider-min.js';
 
 /*
 　■■■＼　　■■＼　　　■■■＼　■＼　■＼
@@ -74,7 +76,7 @@ gulp.task('css', function(done) {
   .pipe(sass())
   .pipe(gulp.dest(distCssPath))
   .on('end', function() {
-    gulp.src([distCssPath + 'main.css', componentsPath + bxSliderCssPath])
+    gulp.src([distCssPath + 'main.css', componentsPath + bxSliderCssPath,  componentsPath + flexSliderCssPath])
     .pipe(concat('main.css'))
     .pipe(gulp.dest(distCssPath))
     .on('end', done);
@@ -83,7 +85,7 @@ gulp.task('css', function(done) {
 
 gulp.task('js', function() {
   return eventStream(
-    gulp.src([componentsPath + jqueryPath, componentsPath + angularPath, componentsPath + bxSliderJsPath])
+    gulp.src([componentsPath + jqueryPath, componentsPath + angularPath, componentsPath + bxSliderJsPath, componentsPath + flexSliderJsPath])
     .pipe(concat('vendor.js'))
     .pipe(uglify({
       preserveComments: 'some'
