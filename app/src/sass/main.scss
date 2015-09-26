@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
 }
 
 .footer {
@@ -43,6 +43,9 @@ body {
 .header {
   &_bg {
     background-color: #2C2C2C;
+    border-radius: 0px;
+    border: 0px;
+    margin-bottom: 0;
   }
   &_titleLogo {
     h1 {
@@ -86,9 +89,16 @@ body {
   &_item {
     list-style: none;
     text-align: center;
+
+    &_price {
+      display: none;
+    }
   }
 }
 
+.flexslider {
+  border: 0px !important;
+}
 
 @media screen and (min-width: 768px) {
   .container {

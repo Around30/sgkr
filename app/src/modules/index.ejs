@@ -12,8 +12,8 @@ var js_vendor = "./../js/vendor.js";
 </head>
 <body>
 <% include ./../common/header %>
-<% //include ./../common/nav      %>
-
+<% //include ./../common/nav         %>
+<!-- flexslider -->
 <div class="flexslider">
   <ul class="slides">
     <li><img src="./../img/slideImg/slide04.jpg" alt=""></li>
@@ -21,12 +21,12 @@ var js_vendor = "./../js/vendor.js";
     <li><img src="./../img/slideImg/slide06.jpg" alt=""></li>
   </ul>
 </div>
-
+<!-- / flexslider -->
 <main>
   <article>
     <div class="itemLists container-fluid">
       <div class="itemList row">
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
           <section class="movie over">
             <iframe width="100%" height="100%"
                     src="https://www.youtube.com/embed/jbDqJ-Evb9U?rel=0&amp;controls=0&amp;showinfo=0&fs=0&controls=0&autohide=2&vq=hd1080"
@@ -34,7 +34,7 @@ var js_vendor = "./../js/vendor.js";
           </section>
         </div>
         <!-- movie -->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
           <h2>NEWS</h2>
           <dl>
             <dt>2015.08.07</dt>
@@ -46,40 +46,91 @@ var js_vendor = "./../js/vendor.js";
           </dl>
         </div>
 
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
-          <img src="./../img/stationery/_01.jpg" alt="">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <h2>オススメ商品</h2>
+
+          <p>check now</p>
+          <img src="./../img/stationery/_recommend01.jpg" alt="" class="img-responsive"/>
+
+          <p>LEON 6月号に掲載。<br>白鳥缶切</p>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <h2>オススメ商品</h2>
+
+          <p>check now</p>
+          <img src="./../img/stationery/_recommend02.jpg" alt="" class="img-responsive"/>
+
+          <p>Begin 6月号に掲載。<br>typewriter NOTES</p>
+        </div>
+
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item01</div>
+          <img src="./../img/stationery/_01.jpg" alt="" class="img-responsive"/>
 
           <div class="itemList_item_detail">
-            <h3 class="itemList_item_name">文房具1</h3>
+            <h3 class="itemList_item_name">『夜の木』レターセット ＜からみあう木＞</h3>
 
-            <div class="itemList_item_price">Price：100円</div>
-            <div class="itemList_item_category">書道用品</div>
+            <div class="itemList_item_price">Price：¥ 540</div>
           </div>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
-          <img src="./../img/stationery/_02.gif" alt="">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item02</div>
+          <img src="./../img/stationery/_02.jpg" alt="" class="img-responsive"/>
 
-          <h3 class="itemList_item_name">文房具2</h3>
+          <h3 class="itemList_item_name">CHARKHA×nakaban 引き出すカード＆封筒</h3>
 
-          <div class="itemList_item_price">Price：100円</div>
-          <div class="itemList_item_category">書道用品</div>
+          <div class="itemList_item_price">Price：¥ 194</div>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item03</div>
+          <img src="./../img/stationery/_03.jpg" alt="" class="img-responsive"/>
+
+          <h3 class="itemList_item_name">こけし通信筒（菜の花）</h3>
+
+          <div class="itemList_item_price">Price：¥ 558</div>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item04</div>
+          <img src="./../img/stationery/_04.jpg" alt="" class="img-responsive"/>
+
+          <h3 class="itemList_item_name">CHARKHA × nakaban レターセット（antibes）</h3>
+
+          <div class="itemList_item_price">Price：¥ 1296</div>
         </div>
 
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
-          <img src="./../img/stationery/_03.jpg" alt="">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item05</div>
+          <img src="./../img/stationery/_05.jpg" alt="" class="img-responsive"/>
 
-          <h3 class="itemList_item_name">文房具3</h3>
+          <div class="itemList_item_detail">
+            <h3 class="itemList_item_name">CHARKHA × nakaban レターセット（late morning）</h3>
 
-          <div class="itemList_item_price">Price：100円</div>
-          <div class="itemList_item_category">書道用品</div>
+            <div class="itemList_item_price">Price：¥ 1296</div>
+          </div>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-3">
-          <img src="./../img/stationery/_04.jpg" alt="">
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item06</div>
+          <img src="./../img/stationery/_06.jpg" alt="" class="img-responsive"/>
 
-          <h3 class="itemList_item_name">文房具4</h3>
+          <h3 class="itemList_item_name">武井武雄「鳥遣いの乙女」三つ折りカード+封筒セットA</h3>
 
-          <div class="itemList_item_price">Price：100円</div>
-          <div class="itemList_item_category">書道用品</div>
+          <div class="itemList_item_price">Price：¥ 972</div>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item07</div>
+          <img src="./../img/stationery/_07.jpg" alt="" class="img-responsive"/>
+
+          <h3 class="itemList_item_name">武井武雄「鳥遣いの乙女」三つ折りカード+封筒セットB</h3>
+
+          <div class="itemList_item_price">Price：¥ 972</div>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <div class="itemList_item_head">New Item08</div>
+          <img src="./../img/stationery/_08.jpg" alt="" class="img-responsive"/>
+
+          <h3 class="itemList_item_name">アラスカ文具店 図形レターセット（青・赤）</h3>
+
+          <div class="itemList_item_price">Price：¥ 367</div>
         </div>
       </div>
     </div>
@@ -90,8 +141,11 @@ var js_vendor = "./../js/vendor.js";
 <% include ./../common/script %>
 <script type="text/javascript" charset="utf-8">
   // スライドショーの設定
-  $(window).load(function() {
-    $('.flexslider').flexslider();
+  $(window).load(function () {
+    $('.flexslider').flexslider({
+      directionNav: false,
+      slideshowSpeed: 5000
+    });
   });
 </script>
 </body>
