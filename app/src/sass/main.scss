@@ -1,5 +1,19 @@
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+//Element用のミックスイン  親要素のクラス名を継承してデリミターとして"__"を付与
+@mixin e($name) {
+  @at-root   &_#{$name} {
+    @content;
+  }
+}
+
+//Modifier用のミックスイン  親要素のクラス名を継承してデリミターとして"--"を付与
+@mixin m($name) {
+  @at-root   &-#{$name} {
+    @content;
+  }
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -87,11 +101,112 @@ body {
 .itemList {
   padding: 0;
   &_item {
+    position: relative;
     list-style: none;
     text-align: center;
+    min-height: 300px;  //jQueryかけたら後で消す
+
+    &_newItemWrap {
+      //display: block;
+      min-height: 300px;
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: all ease 0.3s;
+    }
+
+    &_newItemWrap::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(170,170,150,0.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all ease 0.3s;
+      z-index: 1;
+    }
+
+    &_newItemWrap:hover::after {
+      background: rgba(255,255,255,0) !important;
+    }
+
+    &_head {
+      font-size: 14px;
+      font-style: italic;
+      top: 7%;
+      left: 5%;
+      padding-right: 1em;
+      letter-spacing: 0.1em;
+      z-index: 2;
+    }
+
+    h2 {
+      position: absolute;
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+      top: 7%;
+      left: 5%;
+      padding-right: 1em;
+      letter-spacing: 0.1em;
+    }
+    &_checkNow {
+      position: absolute;
+      font-size: 15px;
+      font-style: italic;
+      top: 7%;
+      right: 4%;
+    }
+
+    &_caption {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &_img {
+      width: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-55%);
+      -ms-transform: translate(-50%,-55%);
+      transform: translate(-50%,-55%);
+      z-index: -2;
+    }
+
+    &_name {
+      position: absolute;
+      font-size: 14px;
+      text-align: center;
+      bottom: 7%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      padding: 0 10px;
+      z-index: 2;
+    }
+
+    img.recommendImg {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      z-index: -1;
+      transform: translate(0,-55%);
+    }
 
     &_price {
       display: none;
+    }
+
+    &.recommendItem {
+      min-height: 300px;
+
+      img {
+        width: 200px;
+      }
     }
   }
 }
