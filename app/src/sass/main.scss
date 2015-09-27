@@ -131,6 +131,16 @@ body {
         background-color: rgba(110, 113, 168, 0.2);
       }
 
+      /* おすすめ商品 */
+      &.genre1::after {
+        background-color: rgba(168, 157, 106, 0.2);
+      }
+
+      /* おすすめ商品 */
+      &.genre2::after {
+        background-color: rgba(160,200,204,0.1);
+      }
+
       /* ~の商品を見る */
       &.textBtn::after {
         background-color: #D7E5EA;
