@@ -1,6 +1,5 @@
 <%
 var site_name = "すぐくる";
-
 var css_main = "./../../css/main.css";
 var js_main = "./../../js/main.js";
 var js_plugins = "./../../js/plugins.js";
@@ -26,24 +25,17 @@ var js_vendor = "./../../js/vendor.js";
 <main>
   <article>
     <div class="itemLists container-fluid">
-      <div class="itemList row">
-        <!-- news -->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4 news">
-          <h2 class="itemList_item_head">NEWS</h2>
-          <dl>
-            <dt>2015.08.07</dt>
-            <dd><a href="http://www.emme.jp/?p=1364">夏季・休業期間のお知らせ</a></dd>
-            <dt>2015.05.01</dt>
-            <dd><a href="http://www.emme.jp/?p=1351">NEWタンポナートシリーズ一部プライス　変更のお知らせ</a></dd>
-            <dt>2015.04.28</dt>
-            <dd><a href="http://www.emme.jp/?p=1344">GW休業日のお知らせ</a></dd>
-          </dl>
+
+      <div class="itemLists_head">
+        <div class="itemLists_head_title">
+          オススメ商品
         </div>
-        <!-- / news -->
+      </div>
+      <div class="itemList row">
         <!-- recommend_item -->
         <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap recommend">
-            <div class="itemList_item_head">オススメ商品01</div>
+            <div class="itemList_item_head">New Item01</div>
             <div class="itemList_item_img">
               <img src="./../../img/stationery/_01.jpg" alt="" class="img-responsive"/>
             </div>
@@ -57,24 +49,50 @@ var js_vendor = "./../../js/vendor.js";
         </div>
         <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap recommend">
-            <div class="itemList_item_head">オススメ商品02</div>
+            <div class="itemList_item_head">New Item02</div>
             <div class="itemList_item_img">
-              <img src="./../../img/stationery/_01.jpg" alt="" class="img-responsive"/>
+              <img src="./../../img/stationery/_02.jpg" alt="" class="img-responsive"/>
             </div>
 
-            <div class="itemList_item_detail">
-              <h3 class="itemList_item_name">『夜の木』レターセット ＜からみあう木＞</h3>
+            <h3 class="itemList_item_name">CHARKHA×nakaban 引き出すカード＆封筒</h3>
 
-              <div class="itemList_item_price">Price：¥ 540</div>
-            </div>
+            <div class="itemList_item_price">Price：¥ 194</div>
           </a>
         </div>
         <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="itemList_item_newItemWrap textBtn">
-            <div class="itemList_item_onlyText">全てのオススメ商品を見る</div>
+          <a href="#" class="itemList_item_newItemWrap recommend">
+            <div class="itemList_item_head">New Item03</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_03.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">こけし通信筒（菜の花）</h3>
+
+            <div class="itemList_item_price">Price：¥ 558</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap recommend">
+            <div class="itemList_item_head">New Item04</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_04.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">CHARKHA × nakaban レターセット（antibes）</h3>
+
+            <div class="itemList_item_price">Price：¥ 1296</div>
           </a>
         </div>
         <!-- / recommend_item -->
+        </div>
+      </div>
+
+    <div class="itemLists container-fluid">
+
+      <div class="itemLists_head">
+        <div class="itemLists_head_title">
+          新着商品
+        </div>
+      </div>
+      <div class="itemList row">
         <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap">
             <div class="itemList_item_head">New Item01</div>
@@ -158,24 +176,105 @@ var js_vendor = "./../../js/vendor.js";
             <div class="itemList_item_price">Price：¥ 972</div>
           </a>
         </div>
-
-        <!--<div class="itemList_item col-lg-3 col-md-3 col-sm-4">-->
-        <!--<a href="#" class="itemList_item_newItemWrap">-->
-        <!--<div class="itemList_item_head">New Item08</div>-->
-        <!--<div class="itemList_item_img">-->
-        <!--<img src="./../img/stationery/_08.jpg" alt="" class="img-responsive"/>-->
-        <!--</div>-->
-        <!--<h3 class="itemList_item_name">アラスカ文具店 図形レターセット（青・赤）</h3>-->
-
-        <!--<div class="itemList_item_price">Price：¥ 367</div>-->
-        <!--</a>-->
-        <!--</div>-->
         <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="itemList_item_newItemWrap textBtn">
-            <div class="itemList_item_onlyText">全ての新作商品を見る</div>
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item08</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_08.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">アラスカ文具店 図形レターセット（青・赤）</h3>
+
+            <div class="itemList_item_price">Price：¥ 367</div>
           </a>
         </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item09</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_09.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">アラスカ文具店 図形レターセット（緑・桃）</h3>
 
+            <div class="itemList_item_price">Price：¥ 367</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item10</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_10.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">恵文社オリジナル 木軸ボールペン</h3>
+
+            <div class="itemList_item_price">Price：¥ 410</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item11</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_11.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">テープ黒板 緑 チョークホルダー付</h3>
+
+            <div class="itemList_item_price">Price：¥ 756</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item12</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_12.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">テープ黒板 黒 チョークホルダー付</h3>
+
+            <div class="itemList_item_price">Price：¥ 756</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item13</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_13.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">ちいさな黒板ふき</h3>
+
+            <div class="itemList_item_price">Price：¥ 302</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item14</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_14.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">もっとちいさな黒板ふき</h3>
+
+            <div class="itemList_item_price">Price：¥ 518</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item15</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_15.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">ダストレススリムチョーク 白 6本入り</h3>
+
+            <div class="itemList_item_price">Price：¥ 216</div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap">
+            <div class="itemList_item_head">New Item16</div>
+            <div class="itemList_item_img">
+              <img src="./../../img/stationery/_16.jpg" alt="" class="img-responsive"/>
+            </div>
+            <h3 class="itemList_item_name">D-BROS Creator's Diary2016</h3>
+
+            <div class="itemList_item_price">Price：¥ 2808</div>
+          </a>
+        </div>
       </div>
     </div>
   </article>

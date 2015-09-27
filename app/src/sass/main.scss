@@ -99,6 +99,17 @@ body {
 
 .itemLists {
   padding: 0;
+
+  &_head {
+    background-color: #383CA2;
+
+    &_title {
+      padding: 16px 0 16px 1%;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      color: #E5E5E5;
+    }
+  }
 }
 .itemList {
   padding: 0;
