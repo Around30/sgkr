@@ -114,6 +114,7 @@ body {
     list-style: none;
     text-align: center;
     min-height: 300px;  //jQueryかけたら後で消す
+    max-height: 300px;
 
     a {
       text-decoration: none;
