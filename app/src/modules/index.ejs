@@ -4,6 +4,7 @@ var css_main = "./../css/main.css";
 var js_main = "./../js/main.js";
 var js_plugins = "./../js/plugins.js";
 var js_vendor = "./../js/vendor.js";
+var siteRootUrl = "http://localhost:9000/";
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,7 +13,7 @@ var js_vendor = "./../js/vendor.js";
 </head>
 <body>
 <% include ./../common/header %>
-<% //include ./../common/nav   %>
+<% //include ./../common/nav    %>
 <!-- flexslider -->
 <div class="flexslider">
   <ul class="slides">
@@ -24,10 +25,10 @@ var js_vendor = "./../js/vendor.js";
 <!-- / flexslider -->
 <main>
   <article>
-    <div class="itemLists container-fluid">
+    <div class="itemLists container-fluid boxList">
       <div class="itemList row">
         <!-- news -->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4 news">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4 news">
           <h2 class="itemList_item_head">NEWS</h2>
           <dl>
             <dt>2015.08.07</dt>
@@ -39,8 +40,8 @@ var js_vendor = "./../js/vendor.js";
           </dl>
         </div>
         <!-- / news -->
-        <!-- recommend_item -->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <!-- オススメ商品 -->
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap recommend">
             <div class="itemList_item_head">オススメ商品01</div>
             <div class="itemList_item_img">
@@ -54,7 +55,7 @@ var js_vendor = "./../js/vendor.js";
             </div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap recommend">
             <div class="itemList_item_head">オススメ商品02</div>
             <div class="itemList_item_img">
@@ -68,13 +69,14 @@ var js_vendor = "./../js/vendor.js";
             </div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="itemList_item_newItemWrap textBtn">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="<%= siteRootUrl %>/view/items" class="itemList_item_newItemWrap textBtn">
             <div class="itemList_item_onlyText">全てのオススメ商品を見る</div>
           </a>
         </div>
-        <!-- / recommend_item -->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <!-- / オススメ商品  -->
+        <!-- 新着商品 -->
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap">
             <div class="itemList_item_head">New Item01</div>
             <div class="itemList_item_img">
@@ -88,7 +90,7 @@ var js_vendor = "./../js/vendor.js";
             </div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap genre1">
             <div class="itemList_item_head">New Item02</div>
             <div class="itemList_item_img">
@@ -100,7 +102,7 @@ var js_vendor = "./../js/vendor.js";
             <div class="itemList_item_price">Price：¥ 194</div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap">
             <div class="itemList_item_head">New Item03</div>
             <div class="itemList_item_img">
@@ -111,7 +113,7 @@ var js_vendor = "./../js/vendor.js";
             <div class="itemList_item_price">Price：¥ 558</div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap">
             <div class="itemList_item_head">New Item04</div>
             <div class="itemList_item_img">
@@ -122,7 +124,7 @@ var js_vendor = "./../js/vendor.js";
             <div class="itemList_item_price">Price：¥ 1296</div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap">
             <div class="itemList_item_head">New Item05</div>
             <div class="itemList_item_img">
@@ -135,7 +137,7 @@ var js_vendor = "./../js/vendor.js";
             </div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap">
             <div class="itemList_item_head">New Item06</div>
             <div class="itemList_item_img">
@@ -146,7 +148,7 @@ var js_vendor = "./../js/vendor.js";
             <div class="itemList_item_price">Price：¥ 972</div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
           <a href="#" class="itemList_item_newItemWrap">
             <div class="itemList_item_head">New Item07</div>
             <div class="itemList_item_img">
@@ -157,28 +159,83 @@ var js_vendor = "./../js/vendor.js";
             <div class="itemList_item_price">Price：¥ 972</div>
           </a>
         </div>
-
-        <!--<div class="itemList_item col-lg-3 col-md-3 col-sm-4">-->
-          <!--<a href="#" class="itemList_item_newItemWrap">-->
-            <!--<div class="itemList_item_head">New Item08</div>-->
-            <!--<div class="itemList_item_img">-->
-              <!--<img src="./../img/stationery/_08.jpg" alt="" class="img-responsive"/>-->
-            <!--</div>-->
-            <!--<h3 class="itemList_item_name">アラスカ文具店 図形レターセット（青・赤）</h3>-->
-
-            <!--<div class="itemList_item_price">Price：¥ 367</div>-->
-          <!--</a>-->
-        <!--</div>-->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="itemList_item_newItemWrap textBtn">
+        <div class="itemList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="<%= siteRootUrl %>/view/items" class="itemList_item_newItemWrap textBtn">
             <div class="itemList_item_onlyText">全ての新作商品を見る</div>
           </a>
         </div>
-
+        <!-- / 新着商品 -->
       </div>
     </div>
+    <!-- カテゴリ一覧 -->
+    <div class="categoryLists container-fluid boxList">
+      <div class="categoryList row">
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="categoryList_item_wrap">
+            <div class="categoryList_item_detail">
+              <div class="categoryList_item_detail_title">鉛筆/色鉛筆</div>
+              <div class="categoryList_item_detail_cnt">商品数：10</div>
+            </div>
+          </a>
+        </div>
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="categoryList_item_wrap">
+            <div class="categoryList_item_detail">
+              <div class="categoryList_item_detail_title">書道道具</div>
+              <div class="categoryList_item_detail_cnt">商品数：10</div>
+            </div>
+          </a>
+        </div>
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="categoryList_item_wrap">
+            <div class="categoryList_item_detail">
+              <div class="categoryList_item_detail_title">油性マーカー</div>
+              <div class="categoryList_item_detail_cnt">商品数：10</div>
+            </div>
+          </a>
+        </div>
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="categoryList_item_wrap">
+            <div class="categoryList_item_detail">
+              <div class="categoryList_item_detail_title">蛍光ペン</div>
+              <div class="categoryList_item_detail_cnt">商品数：10</div>
+            </div>
+          </a>
+        </div>
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="categoryList_item_wrap">
+            <div class="categoryList_item_detail">
+              <div class="categoryList_item_detail_title">裁断機</div>
+              <div class="categoryList_item_detail_cnt">商品数：10</div>
+            </div>
+          </a>
+        </div>
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="categoryList_item_wrap">
+            <div class="categoryList_item_detail">
+              <div class="categoryList_item_detail_title">ボールペン</div>
+              <div class="categoryList_item_detail_cnt">商品数：10</div>
+            </div>
+          </a>
+        </div>
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="categoryList_item_wrap">
+            <div class="categoryList_item_detail">
+              <div class="categoryList_item_detail_title">リングノート</div>
+              <div class="categoryList_item_detail_cnt">商品数：10</div>
+            </div>
+          </a>
+        </div>
+        <div class="categoryList_item boxList_item col-lg-3 col-md-3 col-sm-4 textBtn">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryList_item_wrap">
+            <div class="categoryList_item_onlyText">全てのカテゴリを見る</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- / カテゴリ一覧 -->
   </article>
-  <% // include ./../common/aside %>
+  <% // include ./../common/aside  %>
 </main>
 <% include ./../common/footer %>
 <% include ./../common/script %>

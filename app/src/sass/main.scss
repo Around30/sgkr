@@ -1,18 +1,6 @@
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-//Element用のミックスイン  親要素のクラス名を継承してデリミターとして"__"を付与
-@mixin e($name) {
-  @at-root   &_#{$name} {
-    @content;
-  }
-}
-
-//Modifier用のミックスイン  親要素のクラス名を継承してデリミターとして"--"を付与
-@mixin m($name) {
-  @at-root   &-#{$name} {
-    @content;
-  }
-}
+$allSeeBtnColor: #D7E5EA;
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -97,14 +85,22 @@ body {
   }
 }
 
-.itemLists {
+.boxList {
   padding: 0;
 
+  > .row {
+    padding: 0;
+  }
+  &_item {
+    padding: 0;
+  }
+}
+.itemLists {
   &_head {
     background-color: #383CA2;
 
     &_title {
-      padding: 16px 0 16px 1%;
+      padding: 8px 0 8px 1%;
       letter-spacing: 0.1em;
       font-size: 14px;
       color: #E5E5E5;
@@ -112,8 +108,12 @@ body {
   }
 }
 .itemList {
-  padding: 0;
   &_item {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    min-height: 300px;  //jQueryかけたら後で消す
 
     a {
       text-decoration: none;
@@ -121,12 +121,6 @@ body {
       display: block;
       transition: all ease 0.3s;
     }
-
-    position: relative;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    min-height: 300px;  //jQueryかけたら後で消す
 
     &_newItemWrap {
       //display: block;
@@ -154,7 +148,7 @@ body {
 
       /* ~の商品を見る */
       &.textBtn::after {
-        background-color: #D7E5EA;
+        background-color: $allSeeBtnColor;
       }
     }
 
@@ -284,6 +278,53 @@ body {
 
       dl, dt {
         margin: 10% 0 2%;
+      }
+    }
+  }
+}
+.categoryList {
+  &_item {
+    height: 100px;
+    transition: all ease 0.3s;
+    &:nth-child(odd) {
+      background: #f3f4f4;
+    }
+    &:nth-child(even) {
+      background: #f8f8f3;
+    }
+    &.textBtn {
+      background: $allSeeBtnColor;
+    }
+
+    &_wrap {
+      display: table;
+      width: 100%;
+      height: inherit;
+    }
+    &_detail {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      &_title {
+        font-size: 16px;
+        letter-spacing: 0.2em;
+      }
+      &_cnt {
+        display: none;
+      }
+    }
+    &_onlyText {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: #525252;
+
+      &:hover {
+        background: #fff;
+        transition: all ease 0.3s;
       }
     }
   }
