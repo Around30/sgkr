@@ -12,13 +12,13 @@ var js_vendor = "./../js/vendor.js";
 </head>
 <body>
 <% include ./../common/header %>
-<% //include ./../common/nav  %>
+<% //include ./../common/nav   %>
 <!-- flexslider -->
 <div class="flexslider">
   <ul class="slides">
-    <li><img src="./../img/slideImg/slide04.jpg" alt=""></li>
-    <li><img src="./../img/slideImg/slide05.jpg" alt=""></li>
-    <li><img src="./../img/slideImg/slide06.jpg" alt=""></li>
+    <li><img src="./../img/slideImg/slide07.jpg" alt=""></li>
+    <li><img src="./../img/slideImg/slide08.jpg" alt=""></li>
+    <li><img src="./../img/slideImg/slide09.jpg" alt=""></li>
   </ul>
 </div>
 <!-- / flexslider -->
@@ -26,18 +26,9 @@ var js_vendor = "./../js/vendor.js";
   <article>
     <div class="itemLists container-fluid">
       <div class="itemList row">
-        <!-- movie -->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
-          <section class="movie over">
-            <iframe width="100%" height="100%"
-                    src="https://www.youtube.com/embed/jbDqJ-Evb9U?rel=0&amp;controls=0&amp;showinfo=0&fs=0&controls=0&autohide=2&vq=hd1080"
-                    frameborder="0" allowfullscreen></iframe>
-          </section>
-        </div>
-        <!-- / movie -->
         <!-- news -->
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
-          <h2>NEWS</h2>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4 news">
+          <h2 class="itemList_item_head">NEWS</h2>
           <dl>
             <dt>2015.08.07</dt>
             <dd><a href="http://www.emme.jp/?p=1364">夏季・休業期間のお知らせ</a></dd>
@@ -49,23 +40,38 @@ var js_vendor = "./../js/vendor.js";
         </div>
         <!-- / news -->
         <!-- recommend_item -->
-        <div class="itemList_item recommendItem col-lg-3 col-md-3 col-sm-4">
-          <h2>オススメ商品</h2>
-          <a href="#" class="itemList_item_checkNow">check now</a>
-          <a href="#">
-            <img src="./../img/stationery/_recommend01.jpg" alt="" class="img-responsive recommendImg"/>
-          </a>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap recommend">
+            <div class="itemList_item_head">オススメ商品01</div>
+            <div class="itemList_item_img">
+              <img src="./../img/stationery/_01.jpg" alt="" class="img-responsive"/>
+            </div>
 
-          <p class="itemList_item_caption">LEON 6月号に掲載。<br>白鳥缶切</p>
+            <div class="itemList_item_detail">
+              <h3 class="itemList_item_name">『夜の木』レターセット ＜からみあう木＞</h3>
+
+              <div class="itemList_item_price">Price：¥ 540</div>
+            </div>
+          </a>
         </div>
-        <div class="itemList_item recommendItem col-lg-3 col-md-3 col-sm-4">
-          <h2>オススメ商品</h2>
-          <a href="#" class="itemList_item_checkNow">check now</a>
-          <a href="#">
-            <img src="./../img/stationery/_recommend02.jpg" alt="" class="img-responsive recommendImg"/>
-          </a>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap recommend">
+            <div class="itemList_item_head">オススメ商品02</div>
+            <div class="itemList_item_img">
+              <img src="./../img/stationery/_01.jpg" alt="" class="img-responsive"/>
+            </div>
 
-          <p class="itemList_item_caption">Begin 6月号に掲載。<br>typewriter NOTES</p>
+            <div class="itemList_item_detail">
+              <h3 class="itemList_item_name">『夜の木』レターセット ＜からみあう木＞</h3>
+
+              <div class="itemList_item_price">Price：¥ 540</div>
+            </div>
+          </a>
+        </div>
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap textBtn">
+            <div class="itemList_item_onlyText">全てのオススメ商品を見る</div>
+          </a>
         </div>
         <!-- / recommend_item -->
         <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
@@ -151,17 +157,24 @@ var js_vendor = "./../js/vendor.js";
             <div class="itemList_item_price">Price：¥ 972</div>
           </a>
         </div>
-        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="itemList_item_newItemWrap">
-            <div class="itemList_item_head">New Item08</div>
-            <div class="itemList_item_img">
-              <img src="./../img/stationery/_08.jpg" alt="" class="img-responsive"/>
-            </div>
-            <h3 class="itemList_item_name">アラスカ文具店 図形レターセット（青・赤）</h3>
 
-            <div class="itemList_item_price">Price：¥ 367</div>
+        <!--<div class="itemList_item col-lg-3 col-md-3 col-sm-4">-->
+          <!--<a href="#" class="itemList_item_newItemWrap">-->
+            <!--<div class="itemList_item_head">New Item08</div>-->
+            <!--<div class="itemList_item_img">-->
+              <!--<img src="./../img/stationery/_08.jpg" alt="" class="img-responsive"/>-->
+            <!--</div>-->
+            <!--<h3 class="itemList_item_name">アラスカ文具店 図形レターセット（青・赤）</h3>-->
+
+            <!--<div class="itemList_item_price">Price：¥ 367</div>-->
+          <!--</a>-->
+        <!--</div>-->
+        <div class="itemList_item col-lg-3 col-md-3 col-sm-4">
+          <a href="#" class="itemList_item_newItemWrap textBtn">
+            <div class="itemList_item_onlyText">全ての新作商品を見る</div>
           </a>
         </div>
+
       </div>
     </div>
   </article>
