@@ -4,6 +4,7 @@ var css_main = "./../../css/main.css";
 var js_main = "./../../js/main.js";
 var js_plugins = "./../../js/plugins.js";
 var js_vendor = "./../../js/vendor.js";
+var siteRootUrl = "http://localhost:9000/";
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,7 +13,7 @@ var js_vendor = "./../../js/vendor.js";
 </head>
 <body>
 <% include ./../../common/header %>
-<% //include ./../common/nav     %>
+<% //include ./../common/nav %>
 <main>
   <article>
     <!--  新着商品  -->
@@ -20,7 +21,7 @@ var js_vendor = "./../../js/vendor.js";
 
       <div class="categoryBigList row">
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">鉛筆/色鉛筆</div>
             </div>
@@ -30,7 +31,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">書道道具</div>
             </div>
@@ -40,7 +41,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">油性マーカー</div>
             </div>
@@ -50,7 +51,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">蛍光ペン</div>
             </div>
@@ -60,7 +61,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">裁断機</div>
             </div>
@@ -70,7 +71,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">ボールペン</div>
             </div>
@@ -80,7 +81,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">リングノート</div>
             </div>
@@ -90,7 +91,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">シャープペン</div>
             </div>
@@ -100,7 +101,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">鉛筆/色鉛筆</div>
             </div>
@@ -110,7 +111,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">書道道具</div>
             </div>
@@ -120,7 +121,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">油性マーカー</div>
             </div>
@@ -130,7 +131,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">蛍光ペン</div>
             </div>
@@ -140,7 +141,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">裁断機</div>
             </div>
@@ -150,7 +151,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">ボールペン</div>
             </div>
@@ -160,7 +161,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">リングノート</div>
             </div>
@@ -170,7 +171,7 @@ var js_vendor = "./../../js/vendor.js";
           </a>
         </div>
         <div class="categoryBigList_item boxList_item col-lg-3 col-md-3 col-sm-4">
-          <a href="#" class="categoryBigList_item_wrap">
+          <a href="<%= siteRootUrl %>/view/items" class="categoryBigList_item_wrap">
             <div class="categoryBigList_item_detail">
               <div class="categoryBigList_item_detail_title">シャープペン</div>
             </div>

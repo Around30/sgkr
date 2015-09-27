@@ -1,0 +1,54 @@
+<%
+var site_name = "すぐくる";
+var css_main = "./../../../css/main.css";
+var js_main = "./../../../js/main.js";
+var js_plugins = "./../../../js/plugins.js";
+var js_vendor = "./../../../js/vendor.js";
+var siteRootUrl = "http://localhost:9000/";
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <% include ./../../../common/head %>
+</head>
+<body>
+<% include ./../../../common/header %>
+<% //include ./../common/nav  %>
+<main>
+  <article>
+    <div class="goods boxList container-fluid">
+      <div class="row">
+        <div class="goods_img boxList_item col-lg-5 col-md-5 col-sm-5">
+          <div class="goods_img_main">
+            <img src="<%= siteRootUrl %>/img/stationery/_08.jpg" alt="">
+          </div>
+        </div>
+        <div class="goods_detail boxList_item col-lg-5 col-md-5 col-sm-5">
+          <div class="goods_detail_title">
+            アラスカ文具店 図形レターセット（青・赤）
+          </div>
+          <div class="goods_detail_price">
+            税込 ￥367 <span class="noneTax">（税抜￥340）</span>
+          </div>
+          <div class="goods_detail_info">
+            岐阜県は柳ケ瀬商店街にあるアラスカ文具店のオリジナル文房具「図形レターセット」。
+            六角形の便箋と、三角形の封筒がセットになっています。
+            対角線に沿って便箋を折れば、三角の封筒のなかに収まるしかけ。
+            便箋は無地なので、文字はもちろんイラストも自由に書き込めます。
+            図形の面白さ、数学の美しさを身近な文房具に取り入れた素晴らしい一品で、
+            便箋が封筒にぴったりと収まる様は、単純ながらも感覚的な楽しさを呼び起こしてくれるでしょう。
+            数学に親しみはじめたお子様や、理系のあの人への贈りものとしても喜ばれそう。
+          </div>
+          <div class="goods_detail_category">書類</div>
+          <div class="goods_detail_place">日本</div>
+          <div class="goods_detail_size">W11.5×H9.5×D.2</div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <% // include ./../common/aside    %>
+</main>
+<% include ./../../../common/footer %>
+<% include ./../../../common/script %>
+</body>
+</html>
