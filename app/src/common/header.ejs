@@ -1,3 +1,6 @@
+<%
+var siteRootUrl = "http://localhost:9000/";  //画像イメージのパスに使用
+%>
 <header class="header">
   <!-- ヘッダーナビ -->
   <nav class="navbar navbar-default header_bg">
@@ -13,7 +16,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="header_titleLogo navbar-brand" href="#">
-            <img src="./../img/sugukuru2.png" alt="すぐくる">
+            <img src="<%= siteRootUrl %>img/sugukuru2.png" alt="すぐくる">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
