@@ -331,6 +331,66 @@ body {
   }
 }
 
+.categoryBigList {
+  &_item {
+    min-height: 300px;
+    & div {
+      transition: all ease 0.5s;
+    }
+    &:nth-child(odd) {
+      background: #f3f4f4;
+    }
+    &:nth-child(even) {
+      background: #FCFCF4
+    }
+    &:hover {
+      & div {
+        font-size: 20px;
+        color: #fff;
+        letter-spacing: 1em;
+        transition: all ease 0.8s;
+      }
+    }
+    &:hover:nth-child(odd) {
+      background: rgba(136, 147, 244, 0.7);
+      transition: all ease 1.2s;
+    }
+    &:hover:nth-child(even) {
+      background: rgba(239, 143, 133, 0.7);
+      transition: all ease 1.2s;
+    }
+    &_wrap {
+      position: relative;
+      display: block;
+      height: inherit;
+      min-height: 300px;
+
+    }
+
+    &_detail {
+      position: absolute;
+      top: 50%;
+      margin-top: -1em;
+      width: 100%;
+      text-align: center;
+      &_title {
+        font-size: 18px;
+        color: #4D4D4D;
+        letter-spacing: 0.3em;
+      }
+    }
+
+    &_img {
+      width: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-50%,-55%);
+    }
+  }
+}
+
 .footer {
   background: #303030;
 
