@@ -391,6 +391,60 @@ body {
   }
 }
 
+.item {
+  &_detail {
+    padding: 0 3%;
+    background-color: #f6f6f6;
+    &_title {
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: normal;
+      padding-bottom: 12px;
+      border-bottom: 2px #d3d3d3 solid;
+    }
+    &_price {
+      margin-top: 29px;
+      font-size: 30px;
+      font-weight: bold;
+      color: #b10202;
+    }
+    &_info {
+      margin-top: 34px;
+      line-height: 1.8;
+    }
+
+    dt {
+      font-size: 15px;
+      margin-top: 20px;
+      color: #5c5b5b;
+      padding-bottom: 15px;
+      font-weight: bold;
+      letter-spacing: -0.05em;
+    }
+    dl {
+      font-size: 16px;
+      color: #0f0f0f;
+      font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+      font-weight: bold;
+      padding-bottom: 8px;
+      border-bottom: 2px #d3d3d3 solid;
+    }
+  }
+  &_cart {
+    &_form {
+      &_qty {
+        margin-left: 10px;
+        width: 58px;
+        height: 49px;
+        border: 2px solid #020202;
+        font-size: 21px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+  }
+}
+
 .footer {
   background: #303030;
 
