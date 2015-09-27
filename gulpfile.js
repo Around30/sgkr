@@ -132,13 +132,13 @@ gulp.task('serve', ['build'], function () {
   });
 
   gulp.watch([
-    distVeiwPath + '**/*.html',
+    distVeiwPath + '**/**/*.html',
     distCssPath + '*.css',
     distJsPath + '*.js'
   ]).on('change', reload);
 
-  gulp.watch([commmonPath + '*.ejs'], ['html']);
-  gulp.watch([modulesPath + '**/*.ejs'], ['html']);
+  gulp.watch([commmonPath + '**/*.ejs'], ['html']);
+  gulp.watch([modulesPath + '**/**/*.ejs'], ['html']);
   gulp.watch([sassPath + '*.scss'], ['css']);
   gulp.watch([jsPath + '*.js'], ['js']);
 });

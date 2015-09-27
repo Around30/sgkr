@@ -1,0 +1,51 @@
+<%
+var site_name = "SUGUKURU管理者";
+var css_main = "./../../../css/main.css";
+var js_main = "./../../../js/main.js";
+var js_plugins = "./../../../js/plugins.js";
+var js_vendor = "./../../../js/vendor.js";
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <% include ./../../../common/admin/head %>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <header class="header col-md-12">
+        <% include ./../../../common/admin/header %>
+      </header>
+    </div>
+    <div class="row">
+      <nav class="navbar navbar-inverse col-md-12">
+        <% include ./../../../common/admin/nav %>
+      </nav>
+    </div>
+    <div class="row">
+      <main class="main col-md-12">
+        <article>
+          <h1 class="page-header">ログイン</h1>
+          <form action="">
+            <div class="form-group">
+              <label for="namel">管理者ID : </label>
+              <input type="text" class="from_control" id="namel"></input>
+            </div>
+            <div class="form-group">
+              <label for="namel">パスワード : </label>
+              <input type="text" class="from_control" id="namel"></input>
+            </div>
+            <button class="btn btn-primary">ログイン</button>
+          </form>
+        </article>
+      </main>
+    </div>
+    <div class="row">
+      <footer class="footer col-md-12">
+        <% include ./../../../common/admin/footer %>
+      </footer>
+    </div>
+  </div>
+  <% include ./../../../common/admin/script %>
+</body>
+</html>
