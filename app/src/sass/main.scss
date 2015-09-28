@@ -288,7 +288,7 @@ body {
     height: 100px;
     transition: all ease 0.3s;
     &:nth-child(odd) {
-      background: #f3f4f4;
+      background: #E9F0F0;
     }
     &:nth-child(even) {
       background: #FCFCF4
@@ -431,7 +431,13 @@ body {
     }
   }
   &_cart {
+    position: relative;
+    margin-bottom: 28px;
     &_form {
+      margin-top: 26px;
+      float: left;
+      position: absolute;
+      left: 150px;
       &_qty {
         margin-left: 10px;
         width: 58px;
@@ -441,6 +447,37 @@ body {
         box-sizing: border-box;
         text-align: center;
       }
+
+      &_btn {
+
+        text-indent: -9999px;
+        width: 32px;
+        height: 30px;
+        border: 0;
+        cursor: pointer;
+        outline: 0;
+      }
+
+      &_minus {
+        // margin-left: 36px;
+        background: url(../img/btn_minus.jpg) 0 0 no-repeat;
+      }
+      &_plus {
+        margin-left: 10px;
+        background: url(../img/btn_plus.jpg) 0 0 no-repeat;
+      }
+    }
+    &_submit {
+      background: url(../img/btn_cart.jpg) 0 0 no-repeat;
+      text-indent: -9999px;
+      width: 240px;
+      height: 46px;
+      border: 0;
+      cursor: pointer;
+      outline: 0;
+      position: absolute;
+      left: 200px;
+      top: 0;
     }
   }
 }
